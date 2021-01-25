@@ -2,31 +2,28 @@ import React, { ChangeEvent } from 'react';
 import {store} from "./store/Store"
 
 
-interface CollateralInputProps {
-    updateCollateral(collateral: number): void;
-}
 
-export const CollateralInput: React.FC<CollateralInputProps> = ({updateCollateral}) => {
+export const CollateralInput: React.FC = () => {
     
     //Setting default initialization for input
     const [collateral, setCollateral] = React.useState(0);
 
-    //Update Input Field
+    //Update Input Field while typing
     const updateInputField = (event:ChangeEvent<HTMLInputElement>) => {
         const currentInputValue: number = parseInt(event.target.value);
         setCollateral(currentInputValue);
-    }
+    } 
 
     //Button's onClick
     const onButtonClick = () => {
-        updateCollateral(collateral);
         setCollateral(collateral);
         store.dispatch({
             type: "CALCULATE_MAX_LOAN",
-            payload: collateral
+            payload: {
+                loanAmount: collateral
+            }
         })
     }
-
 
     return (
         <div>

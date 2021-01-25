@@ -19,13 +19,9 @@ function App() {
   const updateMaxLoan = (collateral: number) => {
     dispatch({ type: "CALCULATE_MAX_LOAN", payload: collateral });
   }; */
+ 
 
-
-  store.dispatch({
-    type: "CALCULATE_MAX_LOAN",
-    payload: 5
-  })
-  console.log(store.getState());
+  
 
   return (
     <div className="App">
@@ -38,7 +34,7 @@ function App() {
         }}
       >
         <div style={{ display: "flex", padding: "2em" }}>
-          <CollateralInput updateCollateral={alert} />
+          <CollateralInput  />
         </div>
         <div style={{ display: "flex", padding: "2em" }}>
           <CalculatedMaxLoan />
@@ -47,7 +43,7 @@ function App() {
           <LoanTermInput />
         </div>
         <div style={{ display: "flex", padding: "2em" }}>
-          <CalculatedWeeklyBudget />
+          <CalculatedWeeklyBudget  />
         </div>
       </div>
     </div>

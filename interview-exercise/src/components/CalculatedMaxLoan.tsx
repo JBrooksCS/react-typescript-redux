@@ -1,11 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { CalculatedMaxLoanState } from "./store/CalculatedMaxLoanReducer";
 
 
-export default function CalculatedMaxLoan() {
+function CalculatedMaxLoan(props:any) {
     return (
         <div>
             <h4>MAXIMUM LOAN AMOUNT</h4>
-            <div>$</div>
+            <div>$ {props.loanAmount}</div>
         </div>
     );
 }
+
+//state from redux store are mapped to props
+const mapStateToProps = (state: CalculatedMaxLoanState) => {
+    return {
+        loanAmount: state.CalculatedMaxLoan
+    }
+}
+export default connect(mapStateToProps) (CalculatedMaxLoan)
