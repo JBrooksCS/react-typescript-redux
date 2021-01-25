@@ -1,5 +1,7 @@
 import {createStore, combineReducers} from 'redux'
 import {calculatorReducer} from './CalculatorReducer'
+import { State } from "./CalculatorReducer";
+
 /* import {calculatedBudgetReducer} from './CalculatedBudgetReducer' */
 
 

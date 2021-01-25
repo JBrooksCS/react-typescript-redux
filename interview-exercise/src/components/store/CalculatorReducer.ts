@@ -5,12 +5,16 @@ export interface CalculatedBudgetState {
     CalculatedBudget: number;
   }
 
-const initialState = {
+export interface State {
+  CalculatedMaxLoan: number;
+  CalculatedBudget: number;
+}
+
+
+const initialState: State = {
   CalculatedMaxLoan: 0,
   CalculatedBudget: 0,
 };
-
-
 
 /* type Action = {
   type: "CALCULATE_MAX_LOAN";
@@ -26,11 +30,11 @@ export const calculatorReducer = (
 ) => {
   switch (action.type) {
     case "CALCULATE_MAX_LOAN":
-      var maxLoan = action.payload.loanAmount * 1.5;
+      var maxLoan:number = action.payload.loanAmount * 1.5;
       return { ...state, CalculatedMaxLoan: maxLoan };
     case "CALCULATE_BUDGET":
-      var weeklyBudget = state.CalculatedMaxLoan / action.payload.numWeeks;
-      return { ...state, CalculatedBudget: weeklyBudget };
+      var weeklyBudget:number = state.CalculatedMaxLoan / action.payload.numWeeks;
+      return { ...state, CalculatedBudget: weeklyBudget.toFixed(2) };
     default:
       return { state, CalculatedMaxLoan: 0 };
   }
