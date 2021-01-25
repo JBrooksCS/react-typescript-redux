@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { CollateralInput } from "./components/CollateralInput";
 import CalculatedMaxLoan from "./components/CalculatedMaxLoan";
-import { CalculatedMaxLoanState } from "./components/store/CalculatedMaxLoanReducer";
+import { calculatorReducer } from "./components/store/CalculatorReducer";
 import LoanTermInput from "./components/LoanTermInput";
 import CalculatedWeeklyBudget from "./components/CalculatedWeeklyBudget";
 import { Console } from "console";
@@ -20,9 +20,6 @@ function App() {
     dispatch({ type: "CALCULATE_MAX_LOAN", payload: collateral });
   }; */
  
-
-  
-
   return (
     <div className="App">
       <div style={{ padding: "1em" }}>[BUILT]</div>

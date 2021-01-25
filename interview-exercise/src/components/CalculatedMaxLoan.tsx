@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { CalculatedMaxLoanState } from "./store/CalculatedMaxLoanReducer";
+import { CalculatedMaxLoanState } from "./store/CalculatorReducer";
 
 
 function CalculatedMaxLoan(props:any) {

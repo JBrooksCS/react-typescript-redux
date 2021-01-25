@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import {connect} from 'react-redux';
-import { CalculatedBudgetState } from "./store/CalculatedMaxLoanReducer";
+import {CalculatedBudgetState} from './store/CalculatorReducer'
 import {store} from "./store/Store"
 
 
