@@ -18,4 +18,4 @@ const mapStateToProps = (state: CalculatedMaxLoanState) => {
         loanAmount: state.CalculatedMaxLoan
     }
 }
-export default connect(mapStateToProps) (CalculatedMaxLoan)
+export default connect(mapStateToProps)(CalculatedMaxLoan)

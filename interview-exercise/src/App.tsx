@@ -7,6 +7,9 @@ import LoanTermInput from "./components/LoanTermInput";
 import CalculatedWeeklyBudget from "./components/CalculatedWeeklyBudget";
 import { Console } from "console";
 import {store} from "./components/store/Store"
+import {GridComponent} from './components/GridComponent'
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 
 function App() {
 
@@ -43,6 +46,9 @@ function App() {
           <CalculatedWeeklyBudget  />
         </div>
       </div>
+        <div style={{padding: "2em"}}>
+          <GridComponent />
+        </div>
     </div>
   );
 }

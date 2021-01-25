@@ -29,7 +29,6 @@ export const CollateralInput: React.FC = () => {
         <div>
             <h4>COLLATERAL</h4>$
             <input value={collateral} onChange={updateInputField} type="number"/>
-            
             <button onClick={onButtonClick}>Enter</button>
         </div>
     );
